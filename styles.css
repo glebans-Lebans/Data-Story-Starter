@@ -1,4 +1,8 @@
-:root{
+/* CSS by Grant Lebans */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+/* :root{
     --color-text:#404040;
     --color-surface:#fff;
     --color-action:#8c1d40;
@@ -8,47 +12,85 @@
     --space-3:1rem;
     --radius-card:.5rem;
     --measure:68ch;
+} */
+
+:root {
+    --off-white: #e8edd1;
+    --light-green: #dff2af;
+    --green: #6da08f;
+    --blue-gray: #4c5d75;
+    --dark-blue-gray: #333e4e;
+    --gray: #888888;
+    --dark-gray: #2c2e31;
+    --bg-color: var(--off-white);
+    --card-callout: var(--light-green);
+    --font-color: var(--dark-gray);
+    --dk-bg-color: var(--dark-gray);
+    --dk-font-color: var(--off-white);
+    --border-color: var(--dark-gray);
+    --space: 1rem;
+    --space-aside: 0.5rem;
+    --space-card: 1rem;
+    --border-radius: 0.25rem;
+    --btt-radius: 4rem;
+    --drop-shadow: 3px 3px 3px var(--dark-blue-gray);
+    --heading-font: "Rampart One", Arial, sans-serif;
+    --content-font: Arial, sans-serif;
+    --font-size: 16em;
+    --line-height: 1rem;
+    --bold-font: 700;
+    --content-width: 68ch;
 }
+
 *,*::before,*::after{
     box-sizing:border-box;
 }
 body{
     margin:0;
-    color:var(--color-text);
-    background:var(--color-surface);
-    font-family:Arial,sans-serif;
+    color:var(--font-color);
+    background:var(--bg-color);
+    font-family:var(--content-font);
     line-height:1.6;
 }
 .story-header{
     padding:clamp(2rem,6vw,5rem);
-    background:var(--color-action);
+    background:var(--dark-blue-gray);
     color:#fff;
 }
+h1, h2{
+    font-family: var(--heading-font);
+}
+h1{
+    color: var(--light-green);
+}
+h2{
+    color: var(--dark-blue-gray);
+}
 .eyebrow{
-    color:var(--color-accent);
+    color:var(--off-white);
     font-weight:700;
 }
 .lede{
-    max-width:var(--measure);
+    max-width:var(--content-width);
     font-size:1.25rem;
 }
 main{
     max-width:72rem;
     margin:auto;
-    padding:var(--space-3);
+    padding:var(--space);
 }
 section{
     padding-block:2rem;
-    border-bottom:1px solid var(--color-border);
+    border-bottom:1px solid var(--dark-gray);
 }
 .story-grid{
-    display:grid;gap:var(--space-3);
+    display:grid;gap:var(--space);
     grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));
 }
 figure{
-    margin:0;padding:var(--space-3);
-    border:1px solid var(--color-border);
-    border-radius:var(--radius-card);
+    margin:0;padding:var(--space);
+    border:1px solid var(--border-color);
+    border-radius:var(--border-radius);
 }
 img,.story-graphic{
     display:block;
@@ -57,7 +99,7 @@ img,.story-graphic{
 }
 figcaption,.source-note{
     margin-top:.75rem;
-    color:var(--color-muted);
+    color:var(--blue-gray);
 }
 .table-region{
     overflow-x:auto;
@@ -74,14 +116,14 @@ caption{
 }
 th,td{
     padding:.75rem;
-    border:1px solid var(--color-border);
+    border:1px solid var(--border-color);
     text-align:left;
 }
 thead{
-    background:#f1f1f1;
+    background: var(--light-green);
 }
 .table-region:focus-visible{
-    outline:.2rem solid var(--color-accent);
+    outline:.2rem solid var(--green);
     outline-offset:.2rem;
 }
 .graphic-surface{

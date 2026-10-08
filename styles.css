@@ -37,7 +37,7 @@
     --heading-font: "Rampart One", Arial, sans-serif;
     --content-font: Arial, sans-serif;
     --font-size: 16em;
-    --line-height: 1rem;
+    --line-height: 1.6;
     --bold-font: 700;
     --content-width: 68ch;
 }
@@ -49,8 +49,9 @@ body{
     margin:0;
     color:var(--font-color);
     background:var(--bg-color);
+    background-image: linear-gradient(var(--blue-gray), transparent 20%, transparent 90%, var(--light-green));
     font-family:var(--content-font);
-    line-height:1.6;
+    line-height:var(--line-height);
 }
 .story-header{
     padding:clamp(2rem,6vw,5rem);
@@ -68,7 +69,7 @@ h2{
 }
 .eyebrow{
     color:var(--off-white);
-    font-weight:700;
+    font-weight:var(--bold-font);
 }
 .lede{
     max-width:var(--content-width);
@@ -91,6 +92,8 @@ figure{
     margin:0;padding:var(--space);
     border:1px solid var(--border-color);
     border-radius:var(--border-radius);
+    background-color: var(--card-callout);
+    box-shadow: var(--drop-shadow);
 }
 img,.story-graphic{
     display:block;
@@ -103,6 +106,7 @@ figcaption,.source-note{
 }
 .table-region{
     overflow-x:auto;
+    
 }
 table{
     width:100%;
@@ -111,7 +115,7 @@ table{
 }
 caption{
     text-align:left;
-    font-weight:700;
+    font-weight:var(--bold-font);
     padding:.75rem 0;
 }
 th,td{
@@ -120,7 +124,12 @@ th,td{
     text-align:left;
 }
 thead{
-    background: var(--light-green);
+    background: var(--blue-gray);
+    color: var(--light-green);
+}
+tfoot{
+    background: var(--green);
+    color: var(--light-green);
 }
 .table-region:focus-visible{
     outline:.2rem solid var(--green);

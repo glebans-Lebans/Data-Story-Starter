@@ -2,18 +2,6 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
-/* :root{
-    --color-text:#404040;
-    --color-surface:#fff;
-    --color-action:#8c1d40;
-    --color-accent:#ffc627;
-    --color-muted:#747474;
-    --color-border:#d0d0d0;
-    --space-3:1rem;
-    --radius-card:.5rem;
-    --measure:68ch;
-} */
-
 :root {
     --off-white: #e8edd1;
     --light-green: #dff2af;
@@ -135,16 +123,4 @@ tfoot{
     outline:.2rem solid var(--green);
     outline-offset:.2rem;
 }
-.graphic-surface{
-    fill:#f1f1f1;
-}
-.graphic-primary{
-    fill:var(--color-action);
-}
-.graphic-accent{
-    fill:var(--color-accent);
-}
-.graphic-line{
-    stroke:var(--color-muted);
-    stroke-width:8;
-}
+
